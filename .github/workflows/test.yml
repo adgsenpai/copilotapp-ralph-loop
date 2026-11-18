@@ -1,21 +1,40 @@
 name: test
+
+# Runs on a self-hosted runner (no billed GitHub-hosted minutes).
+# Security: this repo is public, so the workflow is NOT triggered by
+# pull_request — fork PRs must never run code on the runner machine.
 on:
   push:
-  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
 permissions:
   contents: read
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   unit:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        # Add [self-hosted, macOS] / [self-hosted, Windows] here once
+        # runners are registered on those machines.
+        runner:
+          - [self-hosted, Linux, X64]
         node: [20, 22]
-    runs-on: ${{ matrix.os }}
+    name: unit (${{ join(matrix.runner, '-') }}, node ${{ matrix.node }})
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - run: git config --global user.email ci@example.invalid && git config --global user.name ci
+      - name: Configure git identity for test repos
+        run: |
+          git config --global user.email ci@example.invalid
+          git config --global user.name ci
       - run: npm test

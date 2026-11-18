@@ -1,0 +1,20 @@
+{
+  "mode": "fresh",
+  "dir": "<tmp sandbox>",
+  "status": "complete",
+  "iterations": 3,
+  "tokens": 1052022,
+  "decisions": [
+    "1:continue/continue",
+    "2:continue/continue",
+    "3:stop/complete"
+  ],
+  "gitLog": [
+    "9f74e8e ralph: S2 Add temperature conversion CLI",
+    "7f9d3b1 ralph: S1 Add temperature conversion functions",
+    "7afdd0c ralph: initialise loop",
+    "b631b30 toy repo"
+  ],
+  "passed": 10,
+  "total": 10
+}

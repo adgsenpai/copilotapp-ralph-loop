@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "hooks": {
+    "agentStop": [
+      {
+        "type": "command",
+        "bash": "node \"$RALPH_PLUGIN_ROOT/com.github.copilot/hooks/stop-hook.mjs\"",
+        "powershell": "node (Join-Path $env:RALPH_PLUGIN_ROOT 'com.github.copilot/hooks/stop-hook.mjs'); exit $LASTEXITCODE",
+        "env": { "RALPH_PLUGIN_ROOT": "${PLUGIN_ROOT}" },
+        "timeoutSec": 900
+      }
+    ]
+  }
+}

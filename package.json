@@ -1,0 +1,11 @@
+{
+  "name": "ralph-loop-marketplace",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Self-hosted Copilot plugin marketplace for ralph-loop",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm --prefix plugins/ralph-loop test",
+    "test:e2e": "node plugins/ralph-loop/tests/e2e/copilot-e2e.mjs"
+  }
+}

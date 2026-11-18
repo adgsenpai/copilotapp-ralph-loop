@@ -1,0 +1,22 @@
+{
+  "mode": "in-session",
+  "dir": "<tmp sandbox>",
+  "status": "complete",
+  "iterations": 3,
+  "tokens": 614656,
+  "decisions": [
+    "1:continue/continue",
+    "2:continue/continue",
+    "3:stop/complete"
+  ],
+  "gitLog": [
+    "ce205ed ralph: S3 CLI with --to-f / --to-c flags",
+    "be24df6 ralph: S2 Unit tests for conversions",
+    "209063a ralph: S1 Conversion functions in src/convert.mjs",
+    "a86153a ralph: initialise loop",
+    "96e8619 toy repo"
+  ],
+  "passed": 11,
+  "total": 11,
+  "hookDecisions": 3
+}

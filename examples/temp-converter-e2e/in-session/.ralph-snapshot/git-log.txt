@@ -1,0 +1,5 @@
+ce205ed ralph: S3 CLI with --to-f / --to-c flags
+be24df6 ralph: S2 Unit tests for conversions
+209063a ralph: S1 Conversion functions in src/convert.mjs
+a86153a ralph: initialise loop
+96e8619 toy repo

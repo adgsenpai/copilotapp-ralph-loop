@@ -1,0 +1,19 @@
+{
+  "name": "ralph-loop",
+  "version": "0.1.0",
+  "description": "Autonomous spec-driven coding loops (Ralph technique) for GitHub Copilot CLI and the Copilot app",
+  "type": "module",
+  "license": "MIT",
+  "author": "ADGSTUDIOS",
+  "mcpName": "io.github.adgsenpai/ralph-loop-mcp",
+  "bin": {
+    "ralph": "runner/ralph.mjs",
+    "ralph-loop-mcp": "mcp/server.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node tests/run.mjs",
+    "test:e2e": "node tests/e2e/copilot-e2e.mjs"
+  },
+  "keywords": ["ralph", "agent-loop", "autonomous", "spec-driven", "copilot", "mcp"]
+}

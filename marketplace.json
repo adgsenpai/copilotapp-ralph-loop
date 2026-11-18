@@ -1,0 +1,16 @@
+{
+  "name": "adgstudios-ralph",
+  "owner": { "name": "ADGSTUDIOS" },
+  "metadata": { "description": "ADGSTUDIOS plugins for GitHub Copilot", "version": "0.1.0" },
+  "plugins": [
+    {
+      "name": "ralph-loop",
+      "source": "./plugins/ralph-loop",
+      "description": "Autonomous spec-driven coding loops (Ralph technique) for Copilot",
+      "version": "0.1.0",
+      "author": { "name": "ADGSTUDIOS" },
+      "license": "MIT",
+      "keywords": ["ralph", "agent-loop", "autonomous", "spec-driven"]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "S1",
+    "priority": 1,
+    "title": "Conversion functions in src/convert.mjs",
+    "acceptance": [
+      "src/convert.mjs exports cToF and fToC",
+      "cToF(100) === 212 and fToC(32) === 0",
+      "npm test exits 0"
+    ],
+    "passes": true
+  },
+  {
+    "id": "S2",
+    "priority": 2,
+    "title": "Unit tests for conversions",
+    "acceptance": [
+      "test/convert.test.mjs covers 0, 100, -40 and 32 for both functions",
+      "npm test exits 0"
+    ],
+    "passes": true
+  },
+  {
+    "id": "S3",
+    "priority": 3,
+    "title": "CLI with --to-f / --to-c flags",
+    "acceptance": [
+      "node bin/convert.mjs --to-f 100 prints 212",
+      "node bin/convert.mjs --to-c 32 prints 0",
+      "no/unknown flag prints usage to stderr and exits 1",
+      "test/cli.test.mjs covers the CLI",
+      "npm test exits 0"
+    ],
+    "passes": true
+  }
+]

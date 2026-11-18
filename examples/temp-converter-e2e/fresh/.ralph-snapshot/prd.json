@@ -1,0 +1,26 @@
+[
+  {
+    "id": "S1",
+    "title": "Add temperature conversion functions",
+    "priority": 1,
+    "acceptance": [
+      "src/convert.mjs exports cToF(c) and fToC(f) using the standard conversion formulas",
+      "test/convert.test.mjs uses node:test and node:assert to cover both functions at 0, 100, -40, and 32",
+      "npm test exits 0"
+    ],
+    "passes": true
+  },
+  {
+    "id": "S2",
+    "title": "Add temperature conversion CLI",
+    "priority": 2,
+    "acceptance": [
+      "node bin/convert.mjs --to-f 100 prints 212",
+      "node bin/convert.mjs --to-c 32 prints 0",
+      "No flag or an unknown flag prints usage to stderr and exits 1",
+      "test/cli.test.mjs covers the CLI behavior",
+      "npm test exits 0"
+    ],
+    "passes": true
+  }
+]

@@ -22,7 +22,7 @@ plugins/ralph-loop/
 ## Install
 
 ```sh
-copilot plugin marketplace add adgsenpai/coplilotapp-ralph-loop   # or a local path to this repo
+copilot plugin marketplace add adgsenpai/copilotapp-ralph-loop   # or a local path to this repo
 copilot plugin install ralph-loop@adgstudios-ralph
 ```
 
